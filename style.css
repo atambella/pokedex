@@ -1,31 +1,154 @@
-h1 {
-    color:red;
-    text-align: center;
-    font-weight: bo;
-}
+    @font-face {
+        font-family: "pokeFont";
+        src: url(fonts/PocketMonk.otf);
+    }
 
-.flex-container {
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around ;
-    /* Eje secundario */
-    align-items: center;
-    /* background: url("img/5818342.jpg");
-    
-    background-size: 15rem; */
-}
+    header {
+        background-color: red;    
+    }
 
-.flex-item {
-    
-    width: 15%;
-    height: 50vh;
-    /* border: 1px solid; */
-    
-}
+    h1 {
+        color:yellow;
+        text-align: center;
+        font-family: "pokeFont";
+    }
 
-img{
-    max-width: 100%;
-    max-height:50vh
-}
+    
+    h2 {
+        color:yellow;
+        text-align: center;
+        font-family: "pokeFont";
+    }
+
+    input{
+        width: 13rem;
+        text-transform: uppercase;  
+        text-align: center;
+    }
+
+    .texto-borde {
+        text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+    }
+    
+    .texto-borde-h2 {
+        text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+    }
+
+    body {
+        background: url("img/background.jpg");
+        background-size: cover;
+    }
+
+
+    .flex-container {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around ;
+        /* Eje secundario */
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .flex-item {
+        margin-top: 25px;
+        width: 16%;
+        height: 75%;
+        background: url('img/closePokedex.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;        
+    }
+
+    .pokemon-img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 60%;
+    }
+   
+    #charmander:hover {
+        background: url('img/openPokedexCharmander.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(-10deg);
+    }
+
+    #squirtle:hover {
+        background: url('img/openPokedexSquirtle.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #bulbasaur:hover {
+        background: url('img/openPokedexBulbasaur.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(10deg);
+    }
+
+
+    img{
+        max-width: 100%;
+        max-height:50vh
+    }
+        
+    footer{
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+        height: 10%;
+        position:absolute; /*El div será ubicado con relación a la pantalla*/
+        left:0px; /*A la derecha deje un espacio de 0px*/
+        right:0px; /*A la izquierda deje un espacio de 0px*/
+        bottom:0px;
+        font-family: "pokeFont";
+    }
+    
+    .footer-ul {
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-li {
+        list-style: none;
+        margin: .5em ;
+    }
+    
+    .links-ul {
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+    }
+    
+    .links-iframe{
+        align-self: center;
+    }
+
+    .links-li {
+        list-style: none;
+        font-family: "pokeFont";
+        margin: .5em ;
+        color: yellow;
+    }
+
+
+    a{
+        text-decoration: none;
+        text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+        color: yellow;
+    }
+        
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    .form-control{
+        text-align: center;
+    }
