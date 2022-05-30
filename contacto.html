@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
@@ -15,19 +15,25 @@
 
 <body>
 
-    <h2 class="texto-borde">Links de Interés</h2>
+    <h2 class="texto-borde">Contacto</h2>
     
     <main>
-        <ul class="links-ul">
-            <li class="links-li">
-                <a href="https://www.pokemondungeon.com/" target="_blank"><h3>Pokémon Dungeon</h3></a>
-            </li>
-            <li class="links-li">
-                <a href="https://pokeapi.co/" target="_blank"><h3>PokeApi</h3></a>
-            </li>
+        <form id="formulario-contacto" action="" class="form-control">
+            <label class="texto-borde"> Nombre
+                <input type="text" id="nombre" name="nombre">
+            </label>
+            <label class="texto-borde"> Apellido
+                <input type="text" id="apellido" name="apellido">
+            </label>
+            <label class="texto-borde"> Email
+                <input type="text" id="email" name="email">
+            </label>
+            <label class="texto-borde"> Motivo de contacto
+                <textarea name="motivo" id="motivo" cols="30" rows="10"></textarea>
+            </label>
 
-            <iframe class="links-iframe" width="560" height="315" src="https://www.youtube.com/embed/Rsv2VkoIpk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </ul>
+            <button> Enviar </button>
+        </form>
     </main>
 
     <footer>
@@ -37,6 +43,36 @@
             <li class="footer-li"><a href="contacto.html">Contacto</a></li>
         </ul>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formulario-contacto").addEventListener('submit', validarFormulario); 
+        });
+
+        function validarFormulario(evento) {
+        evento.preventDefault();
+        let nombre = document.getElementById('nombre').value;
+        let apellido = document.getElementById('apellido').value;
+        if(nombre.length == 0 || apellido.length == 0) {
+            alert('Debes completar el nombre y apellido');
+            return;
+        }
+        let email = document.getElementById('email').value;
+        
+        if(email.includes('@')){
+        }else{
+            alert('Debes ingresar un mail válido');
+            return;
+        }
+
+        let motivo = document.getElementById('motivo').value;
+        if(motivo.length == 0 ) {
+            alert('Debes ingresar un motivo de contacto');
+            return;
+        }
+        this.submit();
+        }
+    </script>
     
  
 </body>
